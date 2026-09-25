@@ -100,36 +100,6 @@ dotnet user-secrets set "AzureSearch:IndexName" "enterprise-rag-index"
 
 Then restart the API and ingest the PDF again.
 
-## Architecture
-
-             ┌──────────────┐
-PDF ────────►│ PDF Extractor│
-             └──────┬───────┘
-                    ▼
-             ┌──────────────┐
-             │ Text Chunker │
-             └──────┬───────┘
-                    ▼
-             ┌─────────────────────┐
-             │ Azure OpenAI        │
-             │ text-embedding-3    │
-             └──────────┬──────────┘
-                        ▼
-                ┌───────────────┐
-                │ Vector Store  │
-                │ Local / Azure  │
-                └───────┬───────┘
-                        │
-Question ─► Embedding ─► Vector Search
-                        │
-                        ▼
-                ┌───────────────┐
-                │ Semantic      │
-                │ Kernel        │
-                └───────┬───────┘
-                        ▼
-                   GPT-4 class
-                     answer
 
 ## GitHub
 
