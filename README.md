@@ -102,7 +102,6 @@ Then restart the API and ingest the PDF again.
 
 ## Architecture
 
-```text
              ┌──────────────┐
 PDF ────────►│ PDF Extractor│
              └──────┬───────┘
@@ -131,18 +130,6 @@ Question ─► Embedding ─► Vector Search
                         ▼
                    GPT-4 class
                      answer
-```
-
-## Good interview talking points
-
-- Why chunking is required in RAG.
-- Chunk size and overlap trade-offs.
-- Embeddings vs chat completion.
-- Why vector similarity is useful.
-- Why retrieval should happen before generation.
-- Hallucination reduction through grounded prompts.
-- Local in-memory mode vs Azure AI Search.
-- How the design can be extended with hybrid search, metadata filters, reranking, authentication, telemetry and background ingestion.
 
 ## GitHub
 
