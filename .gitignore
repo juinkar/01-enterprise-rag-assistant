@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+appsettings.Local.json
+documents/*.pdf
+.env
